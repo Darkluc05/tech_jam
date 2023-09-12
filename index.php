@@ -1,30 +1,35 @@
 <?php
 for ($i = 33;$i <= 543;$i++){
-    if (is_int($i/5) && is_int($i/9)) // checkt of een deling van 9 en 5 mogelijk is
+    if (is_int($i/5) && is_int($i/9)) // checks if number is divisible by 5 and 9 simultaneously
     {
         even($i, 'web');
         continue;
     }
 
-    if (is_int($i/9)) // checkt of een deling van 9 mogelijk is
+    if (is_int($i/9)) // checks if number is divisible by 9
     {
         even($i, 'developer');
         continue;
     }
 
-
-    if (is_int($i/5)) // checkt of een deling van 5 mogelijk is
+    if (is_int($i/5)) // checks if number is divisible by 5
     {
         echo "<li><b>software</b></li>\n";
         continue;
     }
+
     even($i, $i);
 }
-function even($i, $text){
-    if(is_int($i/2)){
+
+function even($i, $text){ //checks if the number is even and adds the corresponding text to replace
+
+    if(is_int($i/2))
+    {
         echo "<li><b>$text</b></li> \n";
     }
-    else{
+
+    else
+    {
         echo "<li>$text</li> \n";
     }
 }

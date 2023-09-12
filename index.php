@@ -2,25 +2,13 @@
 for ($i = 33;$i <= 543;$i++){
     if (is_int($i/5) && is_int($i/9)) // checkt of een deling van 9 en 5 mogelijk is
     {
-        if (is_int($i/2)) //checkt of deze even is en dus bold moet worden
-        {
-            echo "<li><b>web</b></li> \n";
-        }
-        else{
-            echo "<li>web</li>\n";
-        }
+        even($i, "web");
         continue;
     }
 
     if (is_int($i/9)) // checkt of een deling van 9 mogelijk is
     {
-        if (is_int($i/2)) //checkt of deze even is en dus bold moet worden
-        {
-            echo "<li><b>developer</b></li> \n";
-        }
-        else{
-            echo "<li>developer</li>\n";
-        }
+        even($i, "developer");
         continue;
     }
 
@@ -30,13 +18,13 @@ for ($i = 33;$i <= 543;$i++){
         echo "<li><b>software</b></li>\n";
         continue;
     }
-
-    if (is_int($i/2)) //checkt of deze even is en dus bold moet worden
-    {
-        echo "<li><b>$i</b></li> \n";
+    even($i, $i);
+}
+function even($i, $text){
+    if(is_int($i/2)){
+        echo "<li><b>$text</b></li> \n";
     }
     else{
-        echo "<li>$i</li> \n";
+        echo "<li>$text</li> \n";
     }
-
 }

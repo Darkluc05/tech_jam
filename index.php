@@ -14,7 +14,7 @@ for ($i = 33;$i <= 543;$i++){
 
     if (is_int($i/5)) // checks if number is divisible by 5
     {
-        echo "<li><b>software</b></li>\n";
+        even($i, 'software');
         continue;
     }
 

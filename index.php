@@ -2,13 +2,13 @@
 for ($i = 33;$i <= 543;$i++){
     if (is_int($i/5) && is_int($i/9)) // checkt of een deling van 9 en 5 mogelijk is
     {
-        even($i, "web");
+        even($i, 'web');
         continue;
     }
 
     if (is_int($i/9)) // checkt of een deling van 9 mogelijk is
     {
-        even($i, "developer");
+        even($i, 'developer');
         continue;
     }
 
